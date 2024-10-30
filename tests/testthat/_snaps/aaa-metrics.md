@@ -48,7 +48,7 @@
     Code
       metric_set(rmse, accuracy)
     Condition
-      Error in `validate_function_class()`:
+      Error in `metric_set()`:
       x The combination of metric functions must be:
       * only numeric metrics.
       * a mix of class metrics and class probability metrics.
@@ -72,7 +72,7 @@
     Code
       metric_set(accuracy, foobar, sens, rlang::abort)
     Condition
-      Error in `validate_function_class()`:
+      Error in `metric_set()`:
       x The combination of metric functions must be:
       * only numeric metrics.
       * a mix of class metrics and class probability metrics.
@@ -86,7 +86,7 @@
     Code
       metric_set(accuracy, foobar, sens, rlang::abort)
     Condition
-      Error in `validate_function_class()`:
+      Error in `metric_set()`:
       x The combination of metric functions must be:
       * only numeric metrics.
       * a mix of class metrics and class probability metrics.
@@ -100,7 +100,7 @@
     Code
       metric_set(foobar)
     Condition
-      Error in `validate_function_class()`:
+      Error in `metric_set()`:
       x The combination of metric functions must be:
       * only numeric metrics.
       * a mix of class metrics and class probability metrics.
@@ -154,4 +154,12 @@
       Caused by error:
       ! Can't select columns that don't exist.
       x Column `weight` doesn't exist.
+
+# metric_set() errors on empty input
+
+    Code
+      metric_set()
+    Condition
+      Error in `metric_set()`:
+      ! At least 1 function must be supplied to `...`.
 
